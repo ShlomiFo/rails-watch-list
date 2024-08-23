@@ -1,0 +1,19 @@
+# Query: config/database.yml
+# ContextLines: 1
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: rails-watch-list_development
+
+test:
+  <<: *default
+  database: rails-watch-list_test
+
+  cloudinary:
+  service: Cloudinary
+  folder: <%= Rails.env %>

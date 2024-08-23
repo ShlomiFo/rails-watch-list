@@ -1,1 +1,4 @@
 <h1><%= @list.name %></h1>
+<% @list.bookmarks.each do |bookmark|  %>
+  <%= bookmark %>
+<%end %>
